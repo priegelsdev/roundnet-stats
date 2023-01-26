@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  color: whitesmoke;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  padding: 3em;
+  background-color: #050505;
+  text-align: center;
+}
+
+.player-container {
+  display: grid;
+  grid-template-columns: 4em 4em 4em 4em;
+  grid-template-rows: 3em 3em 3em 3em 3em;
+  justify-content: center;
+  justify-items: center;
+}
+
+/** CARD STYLING **/
+
+.card-container {
+  display: fixed;
+  top: 100px;
+  background-color: red;
+}
+
+.hidden {
+  display: none;
+}
