@@ -9,16 +9,16 @@ export default function Main() {
 
   const playerNames = playerData.map(player => 
     <h4 
-      onClick={showStats} 
+      onClick={() => showStats(player.id)} 
       key={player.id}
       id={player.id}
     >{player.name}
     </h4>)
 
   // function to show player page/stats
-  function showStats() {
-    console.log(playerData[1])
-    setPlayer(prevState => playerData[1])
+  function showStats(id) {
+    console.log(playerData[id - 1])
+    setPlayer(playerData[id - 1])
   }
 
   return (
