@@ -28,11 +28,13 @@ export default function Main() {
       </header> 
 
       <main>
+        {/* if no player is selected, render player names; potentially create own component with edit and add function*/}
         {Object.keys(player).length === 0 && 
         <div className="player-container">
           {playerNames}
         </div>}
-
+        
+        {/* if player is selected, render player component*/}
         {Object.keys(player).length > 0 &&
         <div>
           Test  
