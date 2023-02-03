@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import playerData from './data'
-import Card from './Card'
+import Player from './Player'
 
 export default function Main() {
   // defining state for the currently selected player to be shown in a modal 
@@ -21,6 +21,22 @@ export default function Main() {
     setPlayer(playerData[id - 1])
   }
 
+  let playerStats
+
+  if (Object.keys(player).length > 0) {
+    playerStats = <Player 
+      name = {player.name}
+      serving = {player.serving}
+      serveReceiving = {player.serveReceiving}
+      setting = {player.setting}
+      hitting = {player.hitting}
+      shortDefense = {player.defense.short}
+      longDefense = {player.defense.long}
+      strengths = {player.strengths}
+      weaknesses = {player.weaknesses}
+    />
+  }
+
   return (
     <div className="app-container">
       <header>
@@ -37,7 +53,7 @@ export default function Main() {
         {/* if player is selected, render player component*/}
         {Object.keys(player).length > 0 &&
         <div>
-          Test  
+          {playerStats}
         </div>}
       </main>
     </div>

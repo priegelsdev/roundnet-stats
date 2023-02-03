@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import playerData from './data'
-import Card from './Card'
+import Card from './Player'
 
 export default function Main() {
   // defining state for the currently selected player to be shown in a modal 

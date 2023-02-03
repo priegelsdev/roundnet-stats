@@ -31,11 +31,5 @@ header {
 /** CARD STYLING **/
 
 .card-container {
-  display: fixed;
-  top: 100px;
-  background-color: red;
-}
 
-.hidden {
-  display: none;
 }
