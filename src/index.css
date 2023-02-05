@@ -15,7 +15,7 @@ h1 {
 
 header {
   width: 100%;
-  padding: 3em;
+  padding: 1.5em;
   background-color: #050505;
   text-align: center;
 }
@@ -36,10 +36,44 @@ header {
   flex-direction: column;
 /*   justify-content: center; */
   align-items: center;
+  background-color: green;
+}
+
+.card-name {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem; 
 }
   
 .card-details {
-  /* display: flex;
-  flex-direction: column; */
-  text-align: center;
+  width: 300px;
+  font-size: 1.25em;
+}
+
+.card-individuals > p {
+  margin-bottom: 0.5em;
+}
+
+.buttons-container {
+  width: 100%;
+  text-align: end;
+}
+
+.player-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid green;
+  background-color: black;
+  color: white;
+  font-size: 1.33rem;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+.edit-player-btn {
+
+}
+
+.info-btn {
 }

@@ -1,21 +1,26 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle as fasCircle, faInfo as fasInfo } from '@fortawesome/free-solid-svg-icons'
+import { faPen as fasPen } from '@fortawesome/free-solid-svg-icons'
 
 export default function Player(props) {
 
   const data = [
-    { stat: 'Serving', A: `${props.serving}`*10},
-    { stat: 'Receiving', A: `${props.serveReceiving}`*10},
-    { stat: 'Setting', A: `${props.setting}`*10},
-    { stat: 'Hitting', A: `${props.hitting}`*10},
-    { stat: 'Short Defense', A: `${props.shortDefense}`*10},
-    { stat: 'Long Defense', A: `${props.longDefense}`*10},
+    { stat: 'SRV', A: `${props.serving}`*10},
+    { stat: 'REC', A: `${props.serveReceiving}`*10},
+    { stat: 'SET', A: `${props.setting}`*10},
+    { stat: 'HIT', A: `${props.hitting}`*10},
+    { stat: 'SDEF', A: `${props.shortDefense}`*10},
+    { stat: 'LDEF', A: `${props.longDefense}`*10},
   ]
 
   return (
 
     <div className="card-container" data-player={props.id}>
 
-      <RadarChart cx={250} cy={250} outerRadius={150} width={500} height={500} data={data}>
+      <h3 className="card-name">{props.name}</h3>
+
+      <RadarChart cx={190} cy={190} outerRadius={170} width={380} height={380} data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="stat" />
         <PolarRadiusAxis 
@@ -41,15 +46,18 @@ export default function Player(props) {
       </RadarChart>
 
       <div className="card-details">
-        <h3 className="card-name">{props.name}</h3>
 
         <div className="card-individuals">
           <p className="strengths">Strengths: {props.strengths}</p>
           <p className="weaknesses">Weaknesses: {props.weaknesses}</p>
           <p className="partners">Notable partners: {props.notablePartners}</p>
         </div>
-      {/* figure out way to add notes independantly */}
-      {/* <p className="card-note">Note: {props.note}</p> */}
+
+      </div>
+
+      <div className="buttons-container">
+        <button className="info-btn player-btn"><FontAwesomeIcon icon={fasInfo} /></button>
+        <button className="edit-player-btn player-btn"><FontAwesomeIcon icon={fasPen} /></button>
       </div>
 
     </div>
