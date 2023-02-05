@@ -15,7 +15,7 @@ export default function Player(props) {
 
     <div className="card-container" data-player={props.id}>
 
-      <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
+      <RadarChart cx={250} cy={250} outerRadius={150} width={500} height={500} data={data}>
         <PolarGrid />
         <PolarAngleAxis dataKey="stat" />
         <PolarRadiusAxis 
