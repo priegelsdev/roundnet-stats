@@ -17,8 +17,12 @@ export default function Main() {
 
   // function to show player page/stats
   function showStats(id) {
-    console.log(playerData[id - 1])
     setPlayer(playerData[id - 1])
+  }
+
+  // function to return to main page
+  function backClick() {
+    setPlayer({})
   }
 
   let playerStats
@@ -35,6 +39,7 @@ export default function Main() {
       strengths = {player.strengths}
       weaknesses = {player.weaknesses}
       notablePartners = {player.notablePartners}
+      backClick = {backClick}
     />
   }
 

@@ -2,6 +2,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfo as fasInfo } from '@fortawesome/free-solid-svg-icons'
 import { faPen as fasPen } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft as fasArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Player(props) {
 
@@ -17,6 +18,7 @@ export default function Player(props) {
   return (
 
     <div className="card-container" data-player={props.id}>
+      <button className="back-btn" onClick={props.backClick}><FontAwesomeIcon icon={fasArrowLeft} /></button>
 
       <h3 className="card-name">{props.name}</h3>
 
@@ -54,9 +56,9 @@ export default function Player(props) {
       <div className="card-details">
 
         <div className="card-individuals">
-          <p className="strengths">Strengths: {props.strengths.join(", ")}</p>
-          <p className="weaknesses">Weaknesses: {props.weaknesses.join(", ")}</p>
-          <p className="partners">Notable partners: {props.notablePartners.join(", ")}</p>
+          <p className="strengths"><b>Strengths:</b> {props.strengths.join(", ")}</p>
+          <p className="weaknesses"><b>Weaknesses:</b> {props.weaknesses.join(", ")}</p>
+          <p className="partners"><b>Notable partners:</b> {props.notablePartners.join(", ")}</p>
         </div>
 
       </div>

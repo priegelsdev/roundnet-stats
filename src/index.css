@@ -30,7 +30,26 @@ header {
 
 /** CARD STYLING **/
 
+.back-btn {
+  position: absolute;
+  padding: 0.5em 1em;
+  left: 1.5em;
+  top: 1.3em;
+  border: 0;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 380px) {
+  .back-btn {
+    left: 0.7em;
+  }
+}
+
 .card-container {
+  position: relative;
   padding: 2em;
   display: flex;
   flex-direction: column;
