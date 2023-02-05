@@ -34,6 +34,7 @@ export default function Main() {
       longDefense = {player.defense.long}
       strengths = {player.strengths}
       weaknesses = {player.weaknesses}
+      notablePartners = {player.notablePartners}
     />
   }
 

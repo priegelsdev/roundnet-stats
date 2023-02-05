@@ -54,9 +54,9 @@ export default function Player(props) {
       <div className="card-details">
 
         <div className="card-individuals">
-          <p className="strengths">Strengths: {props.strengths}</p>
-          <p className="weaknesses">Weaknesses: {props.weaknesses}</p>
-          <p className="partners">Notable partners: {props.notablePartners}</p>
+          <p className="strengths">Strengths: {props.strengths.join(", ")}</p>
+          <p className="weaknesses">Weaknesses: {props.weaknesses.join(", ")}</p>
+          <p className="partners">Notable partners: {props.notablePartners.join(", ")}</p>
         </div>
 
       </div>
