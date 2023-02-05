@@ -36,7 +36,8 @@ header {
   flex-direction: column;
 /*   justify-content: center; */
   align-items: center;
-  background-color: green;
+  background-color: #169831;
+  color: white;
 }
 
 .card-name {
