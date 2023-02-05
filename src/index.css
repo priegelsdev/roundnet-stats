@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  background-color: #169831;
 }
 
 h1 {
@@ -55,7 +56,6 @@ header {
   flex-direction: column;
 /*   justify-content: center; */
   align-items: center;
-  background-color: #169831;
   color: white;
 }
 
