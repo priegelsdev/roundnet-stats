@@ -2,18 +2,11 @@ import React, {useState, useEffect} from 'react'
 
 import playerData from './data'
 import Player from './Player'
+import SelectScreen from './SelectScreen'
 
 export default function Main() {
   // defining state for the currently selected player to be shown in a modal 
   const [player, setPlayer] = useState({})
-
-  const playerNames = playerData.map(player => 
-    <h4 
-      onClick={() => showStats(player.id)} 
-      key={player.id}
-      id={player.id}
-    >{player.name}
-    </h4>)
 
   // function to show player page/stats
   function showStats(id) {
@@ -52,8 +45,10 @@ export default function Main() {
       <main>
         {/* if no player is selected, render player names; potentially create own component with edit and add function*/}
         {Object.keys(player).length === 0 && 
-        <div className="player-container">
-          {playerNames}
+        <div className="select-container">
+          <SelectScreen 
+            onClick={showStats} 
+          />
         </div>}
         
         {/* if player is selected, render player component*/}

@@ -23,10 +23,11 @@ header {
 
 .player-container {
   display: grid;
-  grid-template-columns: 4em 4em 4em 4em;
-  grid-template-rows: 3em 3em 3em 3em 3em;
+  grid-template-columns: 6em 6em;
   justify-content: center;
   justify-items: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 /** CARD STYLING **/
