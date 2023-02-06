@@ -8,6 +8,8 @@ body {
   background-color: #169831;
 }
 
+/** TYPOGRAPHY **/
+
 h1 {
   font-family: 'Sofia Sans Extra Condensed', sans-serif;
   color: whitesmoke;
@@ -16,7 +18,10 @@ h1 {
 
 h4 {
   font-size: 1.2rem;
+  cursor: pointer;
 }
+
+/** HEADER **/
 
 header {
   width: 100%;
@@ -66,6 +71,7 @@ form {
   border-radius: 5px;
   font-weight: bold;
   padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 .select-edit-btn {
