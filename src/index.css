@@ -14,6 +14,10 @@ h1 {
   margin: 0;
 }
 
+h4 {
+  font-size: 1.2rem;
+}
+
 header {
   width: 100%;
   padding: 1.5em;
@@ -21,13 +25,51 @@ header {
   text-align: center;
 }
 
+/** SELECT SCREEN **/
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+form {
+  margin-bottom: 1em;
+}
+
+.search-bar {
+  width: 200px;
+  padding: 0.33em;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
 .player-container {
+  margin-left: 1em;
   display: grid;
-  grid-template-columns: 6em 6em;
+  grid-template-columns: 6em 5em;
+  grid-template-rows: repeat(7, 2.5em);
   justify-content: center;
-  justify-items: center;
   color: white;
   text-shadow: 2px 2px 2px black;
+}
+
+.select-buttons-container {
+  width: 10em;
+}
+
+.select-buttons-container > button {
+  background-color: black;
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+.select-edit-btn {
+  margin-right: 4em;
 }
 
 /** CARD STYLING **/
